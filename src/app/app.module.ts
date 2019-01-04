@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { EngineCanvasComponent } from './engine-canvas/engine-canvas.component';
+import { StartPageComponent } from './start-page/start-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EngineCanvasComponent,
+    StartPageComponent
   ],
   imports: [
     BrowserModule,
