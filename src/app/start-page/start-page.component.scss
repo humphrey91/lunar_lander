@@ -1,0 +1,59 @@
+.container {
+  grid-template-columns: 40px 50px auto 50px 40px;
+  grid-template-rows: 300px 100px auto;
+  display: grid;
+  text-align: center;
+}
+
+.titleBar {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  font-size: 3em;
+}
+
+.navBox {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+  nav {
+    margin-bottom: 20px;
+    button {
+      position: relative;
+      display: inline-block;
+      margin: 0;
+      padding: 1.2rem 3.5rem;
+      background: #c2d6d6;
+      font-family: inherit;
+      font-size: 1.4rem;
+      font-weight: 300;
+      line-height: normal;
+      border: 0;
+      border-radius: 0.4rem;
+      box-shadow: -1px 1px 8px rgba(0, 0, 0, 0.4);
+      appearance: none;
+      cursor: pointer;
+      transition: background 250ms, box-shadow 250ms;
+      
+      &:hover {
+        background: #669999;
+        box-shadow: -2px 2px 16px rgba(0, 0, 0, 0.6);
+      }
+      
+      &:active,
+      &:focus {
+        outline: none;
+      }
+      
+      &:active {
+        box-shadow: -4px 4px 24px rgba(0, 0, 0, 0.8);
+      }
+    }  
+  }
+}
+
+.startPage {
+  height: 100vh;
+  background-image: url("src/assets/moon.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
