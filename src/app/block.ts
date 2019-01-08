@@ -10,11 +10,10 @@ class Block extends GameObject {
   height: number
   sides: number
   
-  constructor(x: number,y: number,w: number,h: number,id: number, distances: Array<p5.Vector>, p5: p5) {
-      super(x,y,id, distances, p5)
+  constructor(x: number,y: number,w: number,h: number,id: number, distances: p5.Vector[],scale, p5: p5) {
+      super(x,y,id, distances,scale, p5)
       this.width = w
       this.height = h
-      this.sides = 4
   }
 
   shape(): void {
@@ -31,16 +30,25 @@ class Block extends GameObject {
       super.update()
       this.shape()
   }
+
+  test() {
+    this.vertices.forEach(vert => {
+      this.p5.fill('red')
+      this.p5.ellipse(vert.x,vert.y,10)
+    })
+  }
 }
 
-function createBlock(x,y,w,h,id,p5) {
-  let distances: Array<p5.Vector> = [
-    p5.createVector(-w / 2,h / 2),
-    p5.createVector(-w / 2,-h / 2),
-    p5.createVector(w / 2,-h / 2),
-    p5.createVector(w / 2,h / 2)
+function createBlock(x,y,w,h,id,scale,p5) {
+  let dw = w 
+  let dh = h 
+  let distances: p5.Vector[] = [
+    p5.createVector(-dw / 2,dh / 2),
+    p5.createVector(-dw / 2,-dh / 2),
+    p5.createVector(dw / 2,-dh / 2),
+    p5.createVector(dw / 2,dh / 2)
   ]
-  return new Block(x, y, w, h, id, distances,p5)
+  return new Block(x, y, w, h, id, distances,scale,p5)
 }
 
 export { Block, createBlock }

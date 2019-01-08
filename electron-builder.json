@@ -1,10 +1,11 @@
 {
-  "productName": "angular-electron",
+  "productName": "Lunar Lander",
   "directories": {
     "output": "release/"
   },
     "files": [
         "**/*",
+        "dist/assets/icon*",
         "!**/*.ts",
         "!*.code-workspace",
         "!LICENSE.md",
@@ -20,21 +21,22 @@
         "!tslint.json"
     ],
   "win": {
-    "icon": "dist",
+    "icon": "dist/assets/icon.ico",
     "target": [
-      "portable"
+      "appx"
     ]
   },
   "mac": {
-    "icon": "dist",
+    "icon": "dist/assets/icon.icns",
     "target": [
       "dmg"
     ]
   },
   "linux": {
-    "icon": "dist",
+    "icon": "dist/assets/icon.png",
     "target": [
       "AppImage"
-    ]
+    ],
+    "category": "Game"
   }
 }

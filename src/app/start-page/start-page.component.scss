@@ -8,7 +8,12 @@
 .titleBar {
   grid-column: 3 / 4;
   grid-row: 1 / 2;
-  font-size: 3em;
+  font-size: 3em; 
+  z-index: 1;
+  h2 {
+    color: rgb(12.5, 20.4, 255);
+  }
+  
 }
 
 .navBox {
@@ -20,8 +25,8 @@
       position: relative;
       display: inline-block;
       margin: 0;
-      padding: 1.2rem 3.5rem;
-      background: #c2d6d6;
+      padding: 1rem 3rem;
+      background: rgb(0, 150, 255);
       font-family: inherit;
       font-size: 1.4rem;
       font-weight: 300;
@@ -34,7 +39,7 @@
       transition: background 250ms, box-shadow 250ms;
       
       &:hover {
-        background: #669999;
+        background: rgb(12.5, 20.4, 255);
         box-shadow: -2px 2px 16px rgba(0, 0, 0, 0.6);
       }
       
@@ -48,12 +53,4 @@
       }
     }  
   }
-}
-
-.startPage {
-  height: 100vh;
-  background-image: url("src/assets/moon.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }

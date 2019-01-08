@@ -11,11 +11,13 @@ function createWindow() {
     var size = electronScreen.getPrimaryDisplay().workAreaSize;
     // Create the browser window.
     win = new electron_1.BrowserWindow({
-        x: size.width / 2,
-        y: size.height / 2,
-        width: 800,
-        height: 600,
-        frame: false
+        x: 0,
+        y: 0,
+        width: size.width,
+        height: size.height,
+        frame: false,
+        resizable: false,
+        icon: path.join(__dirname, 'dist/assets/icon.ico')
     });
     if (serve) {
         require('electron-reload')(__dirname, {

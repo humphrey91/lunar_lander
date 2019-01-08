@@ -7,7 +7,7 @@ import { remote } from 'electron';
   styleUrls: ['./start-page.component.scss']
 })
 export class StartPageComponent implements OnInit {
-
+  started: boolean
   constructor() { }
 
   ngOnInit() {
@@ -15,6 +15,14 @@ export class StartPageComponent implements OnInit {
 
   quit() {
     remote.getCurrentWindow().close()
+  }
+
+  start() {
+    this.started = true
+  }
+
+  resetGame($event) {
+    this.started = false
   }
 
 }
