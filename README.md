@@ -4,6 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Run App
 
+Run `nvm use` or swith to npm >= 10.x
+Run `npm install`
 Run `npm start` to start electron app
 
 ## Code scaffolding
