@@ -5,6 +5,8 @@
 /tmp
 /out-tsc
 /release
+main.js
+main.js.map
 
 # dependencies
 /node_modules

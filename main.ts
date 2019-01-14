@@ -19,7 +19,7 @@ function createWindow() {
     height: size.height,
     frame: false,
     resizable: false,
-    icon: path.join(__dirname, 'dist/assets/icon.ico')
+    icon: path.join(__dirname, 'dist/assets/icon.png')
   });
 
   if (serve) {

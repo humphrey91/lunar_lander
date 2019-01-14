@@ -11,7 +11,7 @@ export class GameCollection extends Array {
       let objects = this.filter(piece => {
           return piece.p5.abs(this.hero.position.x - piece.position.x) < range
       })
-    //   console.log(objects)
+  
       for (let i = 0; i < objects.length; i++) {  
         objects[i].update()
       }

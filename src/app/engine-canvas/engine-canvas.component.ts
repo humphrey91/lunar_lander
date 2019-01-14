@@ -15,6 +15,7 @@ import { MoonFloor } from '../moon-floor'
 
 export class EngineCanvasComponent implements OnInit {
   _scale: number
+
   constructor() { 
     this._scale = (500 / (window.innerHeight + window.innerWidth))
   }
@@ -24,7 +25,7 @@ export class EngineCanvasComponent implements OnInit {
   
   idCounter = 0
   gameCollection: any = new GameCollection()
-  
+  scorePads: GameCollection
   isZoomed: boolean = false
   zoomX: number
   zoomY: number
@@ -101,8 +102,10 @@ export class EngineCanvasComponent implements OnInit {
     let landscape = MoonFloor(this.idCounter, this.scale,p)
     this.floor = landscape[0]
     this.stars = landscape[1]
+    this.scorePads = landscape[2]
     this.gameCollection.unshift(ship)
     this.gameCollection = this.gameCollection.concat(this.floor)
+    this.gameCollection = this.gameCollection.concat(this.scorePads)
     this.gameCollection.unshift(...this.stars)
     this.gameCollection.hero = ship
     
